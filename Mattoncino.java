@@ -1,4 +1,5 @@
 public class Mattoncino {
+    private static int counter = 0;
     private int codice;
     private int red;
     private int green;
@@ -8,8 +9,8 @@ public class Mattoncino {
     private int lunghezza;
     private int altezza;
 
-    public Mattoncino (int codice, int red, int green, int blue, int peso, int larghezza, int lunghezza, int altezza) {
-        this.codice = codice;
+    public Mattoncino(int red, int green, int blue, int peso, int larghezza, int lunghezza, int altezza) {
+        this.codice = counter++;
         this.red = red;
         this.green = green;
         this.blue = blue;
@@ -31,7 +32,7 @@ public class Mattoncino {
         return green;
     }
 
-    public int getBlue(){
+    public int getBlue() {
         return blue;
     }
 
@@ -40,14 +41,21 @@ public class Mattoncino {
     }
 
     public int getLarghezza() {
-      return larghezza;
+        return larghezza;
     }
 
     public int getLunghezza() {
         return lunghezza;
     }
 
-    public int getAltezza(){
+    public int getAltezza() {
         return altezza;
     }
+
+    public String toString() {
+        return "Mattoncino [codice = " + codice + "," + "colori =(" + red + "," + green + "," + blue + ")," + "peso = " + peso + "g" + "," + "lunghezza = " + lunghezza + "mm," + "larghezza = " + larghezza + "mm," + "altezza = " + altezza + "mm]";
+    }
 }
+
+
+
